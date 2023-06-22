@@ -1,4 +1,5 @@
 import logging
+import datetime
 import argparse
 
 
@@ -26,5 +27,5 @@ if __name__ == "__main__":
     Triangle.add_argument('-c', metavar='c', type=int, help='введите третью сторону треугольника', default=0)
 
     args = Triangle.parse_args()
-    logger.info(f'Результат работы кода с параметрами {args.a}, {args.b}, {args.c} - '
+    logger.info(f'{datetime.datetime.now()}: Результат работы кода с параметрами {args.a}, {args.b}, {args.c} - '
                 f'{triangle(args.a, args.b, args.c)}')
